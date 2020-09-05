@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.itheima.MapperTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 20.069 s <<< FAILURE! - in com.itheima.MapperTest
+test(com.itheima.MapperTest)  Time elapsed: 12.548 s  <<< ERROR!
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.25.129:6379
+	at com.itheima.MapperTest.test(MapperTest.java:33)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.25.129:6379
+	at com.itheima.MapperTest.test(MapperTest.java:33)
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.25.129:6379
+

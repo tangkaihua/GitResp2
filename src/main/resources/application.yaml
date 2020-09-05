@@ -1,0 +1,48 @@
+server:
+  port: 9160
+
+#配置普通数据
+name: tangkaihua
+
+#配置单行对象
+person: {age: 0,name: tangkaihua,addr: nanjin}
+
+#配置对象
+person1:
+  age: 0
+  name: tangkaihua
+  addr: nanjin
+
+#配置数组
+city:
+  - nanjin
+  - shanghai
+  - suzhou
+city1: [nanjin,shanghai,suzhou]
+
+#配置数组对象
+student:
+  - name: tangkaihua
+    age: 29
+  - name: xiaohong
+    age: 28
+student1: [{name: tangkaihua,age: 29},{name: xiaohong,age: 28}]
+
+#DB Configuration:
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.25.129:3306/tensquare_user?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 86714931
+  redis:
+    host: 192.168.25.129
+    port: 6379
+
+#spring集成Mybatis环境
+#pojo别名扫描包
+mybatis:
+  type-aliases-package: com.itheima.domain
+  #加载Mybatis映射文件
+  mapper-locations: classpath:mapper/*Mapper.xml
+
